@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ── DISCORD DARK ──────────────────────────────────── */
+  /* Dark slate base · blurple primary · warm soft grays   */
+  :root {
+    --background: 220 8% 15%;
+    --foreground: 210 10% 93%;
+
+    --card: 220 8% 12%;
+    --card-foreground: 210 10% 93%;
+
+    --popover: 220 8% 10%;
+    --popover-foreground: 210 10% 93%;
+
+    --primary: 235 86% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 8% 35%;
+    --secondary-foreground: 210 10% 90%;
+
+    --muted: 220 7% 20%;
+    --muted-foreground: 215 8% 55%;
+
+    --accent: 235 50% 22%;
+    --accent-foreground: 235 86% 75%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 7% 20%;
+    --input: 220 7% 20%;
+    --ring: 235 86% 65%;
+
+    --radius: 0.5rem;
+
+    --court-orange: 235 86% 65%;
+    --court-cyan: 170 60% 50%;
+    --court-gold: 43 96% 56%;
+    --positive: 145 65% 42%;
+    --negative: 0 65% 55%;
+
+    --sidebar-background: 220 8% 10%;
+    --sidebar-foreground: 210 10% 93%;
+    --sidebar-primary: 235 86% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 7% 18%;
+    --sidebar-accent-foreground: 210 10% 90%;
+    --sidebar-border: 220 7% 20%;
+    --sidebar-ring: 235 86% 65%;
+    --chart-1: 235 86% 65%;
+    --chart-2: 145 65% 50%;
+    --chart-3: 43 96% 56%;
+    --chart-4: 350 65% 58%;
+    --chart-5: 200 70% 55%;
+    --sidebar: 220 8% 12%;
+    --font-sans: 'DM Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    --font-serif: 'Lora', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.15);
+    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.15);
+    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.2), 0 1px 2px -1px hsl(0 0% 0% / 0.15);
+    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.2), 0 1px 2px -1px hsl(0 0% 0% / 0.15);
+    --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.2), 0 2px 4px -1px hsl(0 0% 0% / 0.15);
+    --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.25), 0 4px 6px -1px hsl(0 0% 0% / 0.2);
+    --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25), 0 8px 10px -1px hsl(0 0% 0% / 0.2);
+    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.4);
+    --tracking-normal: 0em;
+    --spacing: 0.25rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.025em;
+  }
+}
+
+@layer utilities {
+  .hero-glow {
+    background:
+      radial-gradient(ellipse at 25% 40%, hsl(235 86% 65% / 0.07), transparent 50%),
+      radial-gradient(ellipse at 75% 60%, hsl(43 96% 56% / 0.04), transparent 50%);
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 24px -4px hsl(235 86% 65% / 0.2);
+  }
+
+  .stat-mono {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
